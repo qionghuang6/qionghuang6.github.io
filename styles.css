@@ -4,6 +4,7 @@ html {
 *, *:before, *:after {
     box-sizing: inherit;
 }
+
 body{
     background-color: azure;
     margin: 0;
@@ -11,7 +12,27 @@ body{
     font-size: 1.25rem;
 }
 header{
+    margin-top: 4rem;
     overflow: auto;
+}
+nav{
+    background-color: white;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0.25rem
+}
+nav a{
+    background-color: azure;
+    display: inline-block;
+    padding: 0.25rem 1rem;
+    margin: 0.25rem;
+    border: solid;
+    border-radius: 1rem;
+    border-color: black;
+    border-width: medium;
+    text-decoration: none;
 }
 footer{
     padding 10px;
