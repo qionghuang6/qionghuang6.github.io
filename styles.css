@@ -7,6 +7,8 @@ html {
 body{
     background-color: azure;
     margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.25rem;
 }
 header{
     overflow: auto;
@@ -18,32 +20,53 @@ h1{
     margin-bottom: 0.5rem;
     font-family: Garamond,serif;
     text-decoration:overline;
-    font-size:  5em;
+    font-size:  5rem;
     color: darkred;
 }
 h2{
-    font-size: 2em;
+    font-family: "Times New Roman", serif;
+    font-size: 2.5rem;
     margin: 0;
 }
+h3{
+    margin-top: 0.5rem;
+}
+h4{
+    margin: 0.5rem 0 auto;
+}
 .content-wrap{
+    width:65%;
+    float: left;
     margin: 0;
     padding: 20px;
-    background-color:bisque;
 }
 .centered{
     max-width: 1000px;
     margin: 0 auto;
 }
+.small-column{
+    background-color:beige;
+    padding: 20px;
+    float: left;
+    width: 35%;
+    height: 509px;
+}
 
 #mustintro{
     display: inline-block;
 }
-#mustman1{
+#must-img1{
     float: right;
-    width: 200px;
+    width: 12rem;
     border-radius: 50%;
     margin: 1rem;
 }
 #work{
-    font-family: Helvetica, Verdana, sans-serif;
+    background-color:bisque;
+}
+#education{
+    background-color: cornsilk
+}
+footer p{
+    text-align: center;
 }
