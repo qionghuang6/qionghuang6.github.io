@@ -1,0 +1,36 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    background-color: azure;
+    margin: 0;
+}
+footer{
+    padding 10px;
+}
+.content-wrap{
+    margin: 0;
+    padding: 20px;
+    background-color:bisque;
+}
+.centered{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+h1{
+    margin-bottom: 0.5rem;
+    font-family: Garamond,serif;
+    text-decoration:overline;
+    font-size:  4em;
+    color: darkred;
+}
+h2{
+    font-size: 2em;
+    margin: 0;
+}
+#work{
+    font-family: Helvetica, Verdana, sans-serif;
+}
