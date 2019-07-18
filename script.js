@@ -4,7 +4,7 @@ const PAGETHINGS = document.getElementsByClassName('centered');
 function moveMustafa(){
   EATINGMUSTAFA.style.left = Math.floor(Math.random() * 81) + "%";
   EATINGMUSTAFA.style.top = Math.floor(Math.random() * 81) + "%";
-  EATINGMUSTAFA.style.width = Math.floor(Math.random() * 31) + 10 + "vw";
+  EATINGMUSTAFA.style.width = Math.floor(Math.random() * 31) + 10 + "vmax";
   EATINGMUSTAFA.style.transform = "rotate(" + Math.floor(Math.random()*361) + "deg)";
 }
 var interval;
