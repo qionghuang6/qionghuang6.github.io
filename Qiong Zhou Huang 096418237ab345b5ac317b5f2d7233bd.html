@@ -1,0 +1,643 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Qiong Zhou Huang</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 1200px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="41f330fa-e496-407f-999b-03f513b3ef4f" class="page sans"><header><h1 class="page-title">Qiong Zhou Huang</h1></header><div class="page-body"><div id="f132db20-a779-461e-8caf-d2bc49d56e8f" class="column-list"><div id="818ce344-3fc3-4b2d-90a9-99c0fa99e2e4" style="width:68.75%" class="column"><h3 id="94def06a-f586-4ae8-9dd3-2f62dc8a1a65" class="">Hi, I&#x27;m an undergraduate student studying Electrical Engineering and Computer Science at MIT!</h3><p id="42d5cff7-376c-48e2-80e3-31cac11ff43e" class="">
+</p><p id="82047c2a-7662-421b-8a12-039a9f1b479a" class="">
+</p><p id="1eabf65f-c507-4617-b035-f6aa1211dcd1" class="">
+</p><p id="9b3791c2-da2a-4ff7-8413-2481707f7509" class="">
+</p><p id="0203106f-cec6-46bd-bbe8-fb8be8b1610d" class="">
+</p><blockquote id="523a5e8c-b256-42ea-bcbc-298fd1d31415" class="block-color-blue">Contact Me at <a href="mailto:huangq@mit.edu">huangq@mit.edu</a></blockquote><h3 id="fd83c5f7-44a4-4c68-a43d-2543e61d92a3" class=""><a href="https://github.com/qionghuang6">Github</a>    <a href="https://twitter.com/qionghuang6">Twitter</a>    <a href="https://www.linkedin.com/in/qiong-zhou-huang-627243141/">LinkedIn</a></h3></div><div id="3078d86f-14bd-4f98-94ad-86bdf7243812" style="width:31.250000000000007%" class="column"><figure id="09641823-7ab3-45b5-ac31-7b5f2d7233bd" class="image"><a href="Qiong%20Zhou%20Huang%20096418237ab345b5ac317b5f2d7233bd/52664531_349944175620165_4296153226664738816_o.jpg"><img style="width:384px" src="Qiong%20Zhou%20Huang%20096418237ab345b5ac317b5f2d7233bd/52664531_349944175620165_4296153226664738816_o.jpg"/></a></figure><p id="05f37067-84ae-43b9-8667-de69dc757c15" class="">
+</p></div></div><h1 id="be51a6f5-c357-41bf-aea5-e3933971d188" class="">Experience</h1><div id="2326e5d0-af65-4bd2-8c3a-09bdb3920728" class="column-list"><div id="bff5626b-408d-4442-84e8-3cc217b9d790" style="width:28.125%" class="column"><figure id="b9de9f44-1e42-49fb-b235-8248a645083f" class="image"><a href="Qiong%20Zhou%20Huang%20096418237ab345b5ac317b5f2d7233bd/HARVARDlogo.jpg"><img style="width:814px" src="Qiong%20Zhou%20Huang%20096418237ab345b5ac317b5f2d7233bd/HARVARDlogo.jpg"/></a></figure><h3 id="c206fba0-8a1d-4f24-9740-8701d275d975" class="">Research Intern at George Church Lab in HMS</h3><blockquote id="1fe4b175-626e-4ede-8967-3b467ae36266" class="">Used Web Development skills and bioinformatics tools to work on a database with members of the George Church lab. </blockquote></div><div id="f53d9bc5-c899-43f2-95f7-1ddf901a9dc2" style="width:21.874999999999996%" class="column"><figure id="f44391fc-9521-4e73-b8ce-6a9c0fe3521e" class="image"><a href="Qiong%20Zhou%20Huang%20096418237ab345b5ac317b5f2d7233bd/csail.jpg"><img style="width:900px" src="Qiong%20Zhou%20Huang%20096418237ab345b5ac317b5f2d7233bd/csail.jpg"/></a></figure><h3 id="05980737-8625-41f6-837e-134a7650fb92" class="">Undergraduate Research at MIT CSAIL (Spring 2021)</h3><blockquote id="9dfba964-8efd-401d-9dd0-01653ddb4247" class="">UROP at the Decentralized Information Group in CSAIL. Built frontend and infrastructure for decentralized banking.</blockquote></div><div id="3350cd95-dc4a-459d-89c6-684685622c2a" style="width:28.125%" class="column"><figure id="640398df-8f49-40af-90ec-a4cd4c7eafbb" class="image"><a href="Qiong%20Zhou%20Huang%20096418237ab345b5ac317b5f2d7233bd/og_banner.png"><img style="width:480px" src="Qiong%20Zhou%20Huang%20096418237ab345b5ac317b5f2d7233bd/og_banner.png"/></a></figure><h3 id="cceefce4-3a2a-43a8-8007-cbdc2b9538b4" class="">Memorang Internship (Fall 2020)</h3><blockquote id="199ba0a0-32f0-4805-bafa-ec5034b53e8c" class="">Used React and Next.js on a variety of features for the frontend. Learned GraphQL and got much better at using React along the way. </blockquote></div><div id="7195c580-cd19-4e0a-bb91-8e2e03a66d90" style="width:21.875000000000004%" class="column"><figure id="96c895a8-8f82-4c47-8b36-9c29016870dd" class="image"><a href="Qiong%20Zhou%20Huang%20096418237ab345b5ac317b5f2d7233bd/boop.jpg"><img style="width:480px" src="Qiong%20Zhou%20Huang%20096418237ab345b5ac317b5f2d7233bd/boop.jpg"/></a></figure><h3 id="a075c49e-9392-4251-be6c-89be91963431" class="">StuyPulse Robotics (2017-2020)</h3><blockquote id="a2e154e6-b581-473b-bb7e-5e17376a627b" class="">Designed and built mechanisms using CAD and various manufacturing tools for FRC Robotics. Pictured here with <a href="http://honeyco.info">Eric</a>.</blockquote></div></div><h1 id="2937bfd3-cf06-4959-942b-e87ac7f4c65f" class="">Projects</h1><div id="6c418fd6-38aa-4d2c-8cd6-597db347a5c2" class="column-list"><div id="f881f3bc-b76f-4972-8825-c14da2167aa8" style="width:33.333333333333336%" class="column"><figure id="4b4eff05-ff52-4a28-85c6-13f7c3974d00" class="image"><a href="Qiong%20Zhou%20Huang%20096418237ab345b5ac317b5f2d7233bd/Screenshot_from_2021-01-11_15-29-45.png"><img style="width:624px" src="Qiong%20Zhou%20Huang%20096418237ab345b5ac317b5f2d7233bd/Screenshot_from_2021-01-11_15-29-45.png"/></a></figure><h3 id="3f05593b-941a-4b97-a31c-d3443e3271e7" class="">Packing Penguin</h3><blockquote id="1297d185-2eaf-4c9a-9660-0cf8a06715f6" class="">Website made with Next.js and MongoDB to help College Students pack for campus. Work In Progress. Made with Coby Sontag and Endar Li</blockquote><h3 id="604d01c8-405a-4836-956c-5bbddd6297f2" class=""><a href="https://github.com/qionghuang6/packingpenguin">Github</a>    <a href="http://packingpenguin.vercel.app/">Link</a></h3></div><div id="f6a7c7c2-1d7f-490f-a53b-0dbd908e79e6" style="width:33.33333333333333%" class="column"><figure id="245f613e-e81e-4adf-a35e-c7575f67befd" class="image"><a href="Qiong%20Zhou%20Huang%20096418237ab345b5ac317b5f2d7233bd/Screenshot_from_2021-01-11_15-44-01.png"><img style="width:1840px" src="Qiong%20Zhou%20Huang%20096418237ab345b5ac317b5f2d7233bd/Screenshot_from_2021-01-11_15-44-01.png"/></a></figure><h3 id="5a3d5808-adee-4bcf-a723-918b3ed0bfa9" class="">AeroSeeker</h3><blockquote id="b9b48a05-f8f9-4f83-91a8-aa705817ccc8" class="">Website for Tracking the planes near you. Uses the OpenSky API with Next.js Server Side caching</blockquote><h3 id="064d4993-fcd6-49db-95fa-f5b23a9776b8" class=""><a href="https://github.com/qionghuang6/aero-seeker">Github</a>    <a href="https://aero-seeker.vercel.app/">Link</a></h3></div><div id="3e294b4e-8acd-4b04-bd96-c720e6495c80" style="width:33.33333333333334%" class="column"><p id="ba06610a-41bb-45ff-b33a-f5e54c77257a" class="">
+</p></div></div><h1 id="e5aa5324-d353-420c-99e9-a9f32211e3d6" class="">Coursework</h1><div id="189c54e3-f54e-40c1-a6fd-db83abf7b6cf" class="column-list"><div id="425546fd-1288-418b-a01e-e211f2a1504c" style="width:25%" class="column"><h3 id="edd06ca7-39c6-4519-821c-907816d87e4a" class="">Fall 2021</h3><ul id="d4b646ce-3f7f-4638-a77d-204a6c601c68" class="bulleted-list"><li style="list-style-type:disc">6.036: Introduction to Machine Learning</li></ul><ul id="41a708ab-1d77-47e8-bf31-35e92f713041" class="bulleted-list"><li style="list-style-type:disc">6.004: Computation Structures</li></ul><ul id="e9c3a7bf-46fb-4740-a606-1a18ea91f21e" class="bulleted-list"><li style="list-style-type:disc">18.06: Linear Algebra</li></ul><ul id="d9c5f806-ca09-4b4a-8ea6-6a18920f5277" class="bulleted-list"><li style="list-style-type:disc">7.012: Biology</li></ul><ul id="9e97a50f-1fae-4058-99e3-156e5d1a2fb7" class="bulleted-list"><li style="list-style-type:disc">9.01: Neuroscience</li></ul><ul id="2ea16b57-8b48-48be-8229-065260915e8c" class="bulleted-list"><li style="list-style-type:disc">14.41: Public Finance and Public Policy</li></ul></div><div id="f8cf11d6-8144-43e2-bbbf-9304981e7c9b" style="width:29.166666666666675%" class="column"><h3 id="84c4c307-728f-4237-991b-570b4ce89e18" class="">Spring 2021</h3><ul id="06d58192-0107-4b96-80da-03aba97c3ee4" class="bulleted-list"><li style="list-style-type:disc">6.08: Interconnected Embedded Devices</li></ul><ul id="bbb17556-4898-4547-9331-5cfb5ca34a73" class="bulleted-list"><li style="list-style-type:disc">6.006: Introduction to Algorithms</li></ul><ul id="7ff2075a-3fde-4795-954f-50aaca52e59b" class="bulleted-list"><li style="list-style-type:disc">6.042: Mathematics for Computer Science</li></ul><ul id="d350d228-553f-47e1-83c2-1cdab8f3857a" class="bulleted-list"><li style="list-style-type:disc">5.111: Chemistry</li></ul><ul id="798367a6-2c08-4ed7-99c8-462bc2be8efd" class="bulleted-list"><li style="list-style-type:disc">14.01: Microeconomics</li></ul></div><div id="515c1719-00e7-428e-94a6-94dd3c06c6f2" style="width:45.833333333333336%" class="column"><h3 id="2f877d68-b988-4f1e-b73a-9050c0763304" class="">Fall 2020</h3><ul id="a2adfe04-8e7c-4af4-8010-a10ca66da48e" class="bulleted-list"><li style="list-style-type:disc">6.009: Fundamentals of Programming</li></ul><ul id="e2bd5c7f-8c5e-4b72-ab3c-9bef4ef82a97" class="bulleted-list"><li style="list-style-type:disc">8.02: Physics E&amp;M</li></ul><ul id="fb650ba5-7a4b-441a-87ff-ae33e7daa72a" class="bulleted-list"><li style="list-style-type:disc">18.02 Multivariate Calculus</li></ul><ul id="c3b37723-89ff-4cea-acce-754e592b7b34" class="bulleted-list"><li style="list-style-type:disc">21W.016: Designing Meaning</li></ul><h3 id="cc37d72f-0934-481d-95f1-0148e8fdd9e8" class="">IAP 2021</h3><ul id="602805cf-868b-4495-be99-a13453d23cce" class="bulleted-list"><li style="list-style-type:disc">6s.191 Introduction to Deep Learning</li></ul></div></div></div></article></body></html>
